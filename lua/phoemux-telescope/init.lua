@@ -56,12 +56,12 @@ local M = {}
 local cwd
 local theme_opts = {}
 
-M.setup = function(setup_config)
-	if setup_config.theme and setup_config.theme ~= "" then
-		theme_opts = themes["get_" .. setup_config.theme]()
+M.setup = function(opts)
+	if opts.theme and opts.theme ~= "" then
+		theme_opts = themes["get_" .. opts.theme]()
 	end
-	if setup_config.cwd then
-		cwd = setup_config.cwd
+	if opts.cwd then
+		cwd = opts.cwd
 	end
 end
 
@@ -86,7 +86,8 @@ M.phoemux = function(opts)
 	}):find()
 end
 
-return telescope.register_extension{
-  setup = M.setup,
+telescope.register_extension{
   exports = { phoemux = M.phoemux }
 }
+
+return M
