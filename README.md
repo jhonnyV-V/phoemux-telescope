@@ -4,7 +4,7 @@ is a small neovim extension that uses telescope to change or open a tmux session
 
 currently it only works correctly if you use neovim inside a tmux extension
 
-    ![example](./demo.gif)
+![example](./demo.gif)
 
 ## How to Install?
 
