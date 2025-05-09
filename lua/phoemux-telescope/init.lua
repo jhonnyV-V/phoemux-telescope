@@ -229,7 +229,7 @@ M.kill_session = function(opts)
 	end
 
 	pickers.new(opts, {
-		prompt_title = 'Kill And Switch Tmux Session',
+		prompt_title = 'Select and Kill Tmux Session',
 		finder = session_finder(opts),
 		sorter = conf.generic_sorter(opts),
 		attach_mappings = function(prompt_bufnr, map)
